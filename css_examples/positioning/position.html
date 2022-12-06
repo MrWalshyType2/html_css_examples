@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        .square {
+            display: block;
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+        }
+
+        .red { background-color: red; }
+        .green { 
+            background-color: green; 
+        }
+        .green-relative { 
+            background-color: green; 
+            position: relative;
+            left: 60px;
+            bottom: 60px;
+        }
+        .blue { background-color: blue; }
+
+        .relative-container {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h2>Relative positioning</h2>
+    <div class="square red">
+    </div>
+    <div class="square green-relative">
+    </div>
+    <div class="square blue">
+    </div>
+
+    <h2>Absolute positioning</h2>
+    <div class="relative-container">
+        <div class="square red">
+        </div>
+        <div class="square green">
+        </div>
+        <div class="square blue absolute">
+        </div>
+        <div class="square green">
+        </div>
+    </div>
 </body>
 </html>
