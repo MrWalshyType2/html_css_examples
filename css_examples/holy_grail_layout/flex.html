@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy grail layout</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 10px;
+        }
+
+        *, *::after, *::before {
+            box-sizing: inherit;
+        }
+
+        p, a, li, dd, dt, span {
+            font-size: 1.6rem;
+        }
+
+        h1 { font-size: 3.2rem; }
+        h2 { font-size: 2.4rem; }
+        h3 { font-size: 1.8rem; }
+
+        body {
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            background-color: black;
+        }
+
+        .nav-btn {
+            display: block;
+        }
+
+        .nav-btn > a {
+            display: block;
+            padding: 12px 16px;
+            
+            color: white;
+            text-decoration: none;
+            background-color: black;
+        }
+
+        .nav-btn > a:hover {
+            background-color: greenyellow;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left, .right, .middle {
+            height: 100vh;
+        }
+
+        .left {
+            flex: 25%;
+            background-color: lightcoral;
+        }
+
+        .middle {
+            flex: 50%;
+            background-color: royalblue;
+        }
+
+        .right {
+            flex: 25%;
+            background-color: lightcoral;
+        }
+
+        footer {
+            width: 100%;
+            height: 60px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="nav-btn"><a href="">Home</a></li>
+            <li class="nav-btn"><a href="">Shop</a></li>
+            <li class="nav-btn"><a href="">Contact</a></li>
+            <li class="nav-btn"><a href="">About</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="left">Left</aside>
+        <main class="middle">Middle</main>
+        <aside class="right">Right</aside>
+    </div>
+    <footer>
+        Footer here
+    </footer>
+</body>
+</html>
