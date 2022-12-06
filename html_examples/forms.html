@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <h2>Basic submit a Google search form</h2>
+    <form action="https://google.com/search" method="GET">
+        <!-- The for attribute must match the id of an element in a form -->
+        <label for="search_field">Google search</label>
+        <input type="text" 
+            name="q" 
+            placeholder="Enter search term..."
+            id="search_field">
+        
+        <button type="submit">Search</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <h2>User profile form</h2>
+    <form action="">
+        <fieldset>
+            <!-- a fieldset must have a legend -->
+            <legend>General information</legend>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+                <!-- can't submit the form unless all required attributes are entered -->
+            </div>
+    
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal information</legend>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <!-- Buttons forming a radio-group
+                     where you can only select one must all have the same name
+                -->
+                <label for="biological_sex_m">Male:</label>
+                <input type="radio" name="bio_sex" id="biological_sex_m" value="Male">
+                <label for="biological_sex_f">Female:</label>
+                <input type="radio" name="bio_sex" id="biological_sex_f" value="Female">
+            </div>
+
+            <div>
+                <label for="security_question">Security question:</label>
+                <!-- use the size attribute to control the size of the input -->
+                <select name="security_q" id="security_question">
+                    <option value="mothers_maiden_name">What is your mothers maiden name?</option>
+                    <option value="favourite_colour">What is your favourite colour?</option>
+                    <option value="high_school">What high school did you attend?</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="date_of_birth">Date of birth:</label>
+                <input type="date" name="date_of_birth" id="date_of_birth" required
+                       min="2022-03-01">
+                <!-- 
+                    min and max can be used to control the minimum and maximum 
+                    dates that can be selected
+                    - can also be used for numeric types
+                 -->
+            </div>
+        </fieldset>
+
+        <button type="submit">Sign-up</button>
+    </form>
+</body>
+</html>
