@@ -1,0 +1,49 @@
+/* comment */
+p {
+    color: blue;
+}
+
+/* id selectors are prefixed with the # symbol */
+#title {
+    color: white;
+    background-color: black;
+}
+
+/* class selectors are prefixed with the . symbol */
+.subtitle {
+    color: lightgreen;
+    background-color: black;
+}
+
+.centre {
+    text-align: center;
+}
+
+/* attribute selector */
+input[disabled] {
+    background-color: gray;
+    /* border-color: red; */
+}
+
+.pseudo-class-example :first-child {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.psuedo-class-hover-example:hover {
+    background-color: royalblue;
+    color: white;
+    padding: 8px;
+}
+
+/* descendent selector */
+.desc p {
+    background-color: royalblue;
+    color: white;
+    padding: 8px;
+}
+
+/* adjacent selector */
+.adjacent + p {
+    background-color: green;
+}
