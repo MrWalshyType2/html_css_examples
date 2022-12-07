@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Grid</title>
+
+    <style>
+        .container {
+            display: grid;
+
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+
+            /* gap: 12px; */
+        }
+
+        .red {
+            background-color: red;
+            border: solid 1px black;;
+        }
+
+        .one {
+            grid-column: 1 / span 12;
+        }
+
+        .two {
+            grid-column: 1 / span 6;
+            grid-row: 2 / 4;
+        }
+
+        .three {
+            grid-column: 7 / span 6;
+            grid-row: 2 / 5;
+        }
+
+        .navbar {
+            background-color: royalblue;
+            grid-column: 1 / span 12;
+        }
+
+        .aside {
+            background-color: brown;
+            grid-column: 1 / span 3;
+            grid-row: 2 / span 5;
+        }
+
+        .main-content {
+            background-color: aquamarine;
+            grid-column: 4 / span 10;
+            grid-row: 2 / span 5;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            grid-column: 1 / span 12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red one">One</div>
+        <div class="red two">Two</div>
+        <div class="red three">Three</div>
+    </div>
+
+    <h2>Example page layout</h2>
+    <div class="container">
+        <div class="navbar">
+            Navbar
+        </div>
+        <div class="aside">Sidemenu</div>
+        <div class="main-content">
+            Main content
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+</body>
+</html>
