@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Flexbox</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* direct children become flex-items */
+
+            height: fit-content;
+            background-color: lightyellow;
+
+            /* Use justify-content to align along the main axis */
+            justify-content: flex-start;
+
+            /* Use align-items to align along the cross axis */
+            align-items: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            margin: 8px;
+
+            /* flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1; */
+            /* flex: flex-basis */
+            /* flex: flex-grow flex-shrink flex-basis */
+            flex: 1 0 auto;
+        }
+
+        .target {
+            flex: 4 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="box"></div>
+        <div class="box target"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

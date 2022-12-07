@@ -59,12 +59,12 @@
         }
 
         .left {
-            flex: 25%;
+            flex: 20%;
             background-color: lightcoral;
         }
 
         .middle {
-            flex: 50%;
+            flex: 55%;
             background-color: royalblue;
         }
 
@@ -78,6 +78,24 @@
             height: 60px;
             color: white;
             background-color: black;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .navbar {
+                display: block;
+            }
+
+            .nav-btn {
+                text-align: center;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left, .middle, .right {
+                flex: 100%;
+            }
         }
     </style>
 </head>
