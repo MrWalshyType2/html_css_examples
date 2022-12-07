@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Lists</title>
+
+    <style>
+        .list1 {
+            list-style-position: outside;
+            list-style-type: '\235F';
+        }
+
+        .list1 > li {
+            padding: 0 16px;
+            line-height: 2;
+        }
+
+        .list2 > dt {
+            font-weight: 700;
+            color: royalblue;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .list3 {
+            counter-reset: section;
+            list-style-type: none;
+        }
+
+        .list3 > li::before {
+            counter-increment: section;
+            content: counter(section) " - ";
+        }
+
+        .navbar {
+            width: 100%;
+            list-style-type: none;
+            font-size: 0;
+            padding: 0;
+            margin: 0;
+            background-color: black;
+        }
+
+        .nav-btn {
+            display: inline-block;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            font-size: 16px;
+        }
+
+        .nav-link:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="nav-btn"><a class="nav-link" href="#">Home</a></li> 
+            <li class="nav-btn"><a class="nav-link" href="#">Store</a></li>
+            <li class="nav-btn"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-btn"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <h2>Cars</h2>
+    <ul class="list1">
+        <li>Mazda</li>
+        <li>Toyota</li>
+        <li>Suzuki</li>
+    </ul>
+
+    <h2>Fruit</h2>
+    <dl class="list2">
+        <dt>Apples</dt>
+        <dd>A crunchy fruit</dd>
+        <dd>Don't eat the seeds</dd>
+
+        <dt>Oranges</dt>
+        <dd>An orange fruit</dd>
+        <dd>Tangy in flavour</dd>
+
+        <dt>Pears</dt>
+        <dd>Mild and earthy in taste</dd>
+        <dd>Fibrous texture</dd>
+    </dl>
+
+    <h2>Counters</h2>
+    <ol class="list3">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <a href="#">To top</a>
+</body>
+</html>

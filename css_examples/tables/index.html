@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Tables</title>
+
+    <style>
+        /* table 1 */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        #order_table {
+            width: 100%;
+            border: 1px solid black;
+            text-align: right;
+        }
+
+        #order_table > thead > tr > th {
+            padding: 8px;
+            border-bottom: 1px solid black;
+        }
+
+        #order_table > tbody > tr > td {
+            border-right: 1px dashed black;
+            border-bottom: 1px dashed black;
+        }
+
+        #order_table > tbody > tr > td:last-child {
+            border-right: none;
+        } 
+
+        #order_table > tfoot > tr > th {
+            border-right: 1px dashed black;
+        }
+
+        /* table 2 */
+        #order_table2 {
+            width: 100%;
+            border: 1px solid black;
+            text-align: right;
+            border-collapse: collapse;
+            /* border-spacing: 16px 8px; */
+        }
+
+        #order_table2 th, #order_table2 td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        #order_table6 {
+            width: 100%;
+            border: 1px solid black;
+            text-align: right;
+            border-collapse: collapse;
+        }
+
+        #order_table6 th, #order_table6 td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        #order_table6 th {
+            background-color: #226fff42;
+        }
+
+        #order_table6 tr:nth-child(even) {
+            background-color: rgba(255, 182, 193, 0.37);
+        }
+
+        #order_table6 col:last-child {
+            background-color: lightgray;
+        }
+
+        #order_table6 > tbody tr:hover {
+            background-color: #DDDDDD;
+            /* box-shadow: x-offset y-offset blur-radius spread colour */
+            box-shadow: 4px 4px 8px 2px green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table 1</h2>
+    <div class="table-container">
+        <table id="order_table">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Item
+                    </th>
+                    <th scope="col">
+                        Quantity
+                    </th>
+                    <th scope="col">
+                        Cost
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">
+                        Total
+                    </th>
+                    <td>
+                        £4.70
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>
+                        6 pack apples
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        £1.70
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Chocolate Orange
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        £1.00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Table 2</h2>
+    <div class="table-container">
+        <table id="order_table2">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Item
+                    </th>
+                    <th scope="col">
+                        Quantity
+                    </th>
+                    <th scope="col">
+                        Cost
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">
+                        Total
+                    </th>
+                    <td>
+                        £4.70
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>
+                        6 pack apples
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        £1.70
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Chocolate Orange
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        £1.00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Table 3</h2>
+    <div class="table-container">
+        <table id="order_table6">
+            <colgroup>        
+                <col span="1">        
+                <col span="1">        
+                <col span="1">    
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Item
+                    </th>
+                    <th scope="col">
+                        Quantity
+                    </th>
+                    <th scope="col">
+                        Cost
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">
+                        Total
+                    </th>
+                    <td>
+                        £4.70
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>
+                        6 pack apples
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        £1.70
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Chocolate Orange
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        £1.00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
