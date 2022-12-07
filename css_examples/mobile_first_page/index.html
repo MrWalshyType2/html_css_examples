@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile first</title>
+
+    <style>
+        /* general */
+        html {
+            box-sizing: border-box;
+            font-size: 10px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        p, a, li, dt, dl, span {
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        /* utility */
+        .w-100 {
+            width: 100%;
+        }
+
+        .clearfix {
+            clear: both; content: ' '; display: table;
+        }
+
+        /* navbar */
+        .navbar {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .navbar > li {
+            display: block;
+            width: 100%;
+        }
+
+        .navbar > li > a {
+            display: block;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar > li > a:hover {
+            background-color: #00AA22;
+        }
+
+        /* main content */
+        .container {
+            width: 100%;
+        }
+
+        .left, .right {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .float-left {
+            width: 100%;
+        }
+
+        .float-right {
+            width: 100%;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            color: white;
+        }
+
+        footer > p {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            margin: 0;
+            transform: translateY(-50%);
+        }
+
+        /* Media queries */
+        /* tablet */
+        @media screen and (min-width: 768px) {
+            p, a, li, dt, dl, span {
+                font-size: 1.6rem;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3.2rem;
+            }
+
+            h3 {
+                font-size: 2.4rem;
+            }
+        }
+
+        /* small laptop */
+        @media screen and (min-width: 1024px) {
+
+            /* main content */
+            .container {
+                clear: both;
+                content: " ";
+                display: table;
+            }
+
+            .left {
+                float: left;
+                width: 20%;
+                padding: 0 5%;
+            }
+
+            .right {
+                float: right;
+                width: 75%;
+                padding: 0 5% 0 0;
+            }
+
+            .float-left, .float-right {
+                width: 300px;
+            }
+
+            .float-left {
+                margin-right: 8px;
+                float: left;
+            }
+
+            .float-right {
+                margin-left: 8px;
+                float: right;
+            }
+
+            /* navbar */
+            .navbar {
+                font-size: 0;
+                background-color: black;
+            }
+
+            .navbar > li {
+                display: inline-block;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="">Home</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main class="right">
+            <h1>The main content</h1>
+            <img class="float-left" src="https://via.placeholder.com/720x240" alt="placeholder iamge">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo magnam quod soluta. Tenetur quos, pariatur, quisquam soluta nulla quibusdam, vero ut nostrum numquam nam asperiores vitae cumque ab itaque ullam.</p>
+            <p>Magnam eum officia illum sit, nesciunt perferendis ducimus soluta! Fuga ut voluptas suscipit ipsam sed, nam distinctio itaque cupiditate repudiandae ipsa corrupti repellendus enim exercitationem quasi possimus quam repellat esse.</p>
+            <p>Illo nulla id reprehenderit! Necessitatibus repellendus perspiciatis aliquid officiis. Saepe libero corporis autem voluptas nam nostrum illum amet at consequatur porro, quam animi inventore? Dolorem consequuntur explicabo ea impedit quae!</p>
+            <p>Eveniet natus ad architecto soluta repellat totam eaque repudiandae aperiam corporis a saepe quod, itaque nesciunt sint ducimus sequi quasi iste error tenetur perspiciatis, maiores consequatur est laudantium necessitatibus! Officiis!</p>
+
+            <section class="clearfix">
+                <h2>Some related content</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptate itaque velit ab odit quisquam, repudiandae aliquid eum quod officia dolor. Nulla necessitatibus id, impedit nam magni eius natus harum!</p>
+                <p>Minima velit voluptatem commodi provident possimus dolorum dolores minus eius quod repellat, veritatis qui assumenda tempora nam! Facilis odit iusto eligendi dolor cupiditate obcaecati dicta deserunt, a dolorum veritatis veniam.</p>
+                <img src="https://via.placeholder.com/1024x360" alt="placeholder" class="w-100">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusamus iste ea quod dolorem fugiat doloremque officia culpa placeat assumenda eius saepe quia quas sapiente cupiditate praesentium commodi ad facilis eligendi molestias nostrum, id reiciendis earum ipsum. Provident, id. Cum pariatur optio itaque hic iste neque voluptas dicta quos officiis.</p>
+                <img src="https://via.placeholder.com/720x240" alt="placeholder" class="float-right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore possimus eos modi provident facilis porro sit nulla beatae est, asperiores labore? Animi velit assumenda accusamus. Reprehenderit rem blanditiis dicta asperiores aut saepe maxime, libero expedita soluta debitis magnam laboriosam?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum omnis quis! Soluta obcaecati nostrum quibusdam quaerat repellat vel quasi?</p>
+            </section>
+        </main>
+        <aside class="left">
+            <h2>Useful information:</h2>
+            <ul>
+                <li>info 1</li>
+                <li>info 2</li>
+                <li>info 3</li>
+                <li>info 4</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p><small>Company ltd. &copy; Copyright 2022</small></p>
+    </footer>
+</body>
+</html>

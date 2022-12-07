@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        /* Slide in from left (multiple intermediary keyframes) */
+        .slide-in2 {
+            animation-name: slidein2;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            height: 120px;
+            margin: 0;
+        }
+
+        @keyframes slidein2 {
+            from {
+                font-size: 1rem;
+                margin-left: -100%;
+            }
+
+            50% {
+                font-size: 1.4rem;
+            }
+
+            75% {
+                font-size: 1.8rem;
+            }
+
+            to {
+                font-size: 2.0rem;
+                margin-left: 0%;
+            }
+        }
+
+        /* Slide in from right */
+        .slide-in-from-right {
+            animation-name: slidein-from-right;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes slidein-from-right {
+            from {
+                margin-left: 100%;
+                width: 1000%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        .hide-overflow {
+            overflow: hidden;
+        }
+
+        /* transition */
+        .box {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: #ff00aa70;
+            transition: rotate 3s ease-in 0.5s, 
+                        height 3s, 
+                        width 3s, 
+                        background-color 2s;
+        }
+
+        .box:hover {
+            background-color: #FF00AA;
+            width: 100px;
+            height: 100px;
+            rotate: 360deg;
+        }
+
+        .rotate {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        .rotate:hover {
+            transform: translate(50px, 100px) rotate(180deg) scale(2, 3);
+        }
+
+        .funky-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .funky-box {
+            height: 200px;
+            width: 100px;
+            margin: 8px;
+            background-image: linear-gradient(180deg,rgb(150, 75, 200),rgb(120, 144, 180));
+
+            animation: skew_and_rotate 5s ease-in-out infinite;
+            animation-direction: alternate;
+            transform: skew(30deg) rotate(30deg);
+        }
+
+        @keyframes skew_and_rotate {
+        0% {
+            transform: skew(30deg, 30deg) rotate(30deg);
+            height: 200px;
+        }
+
+        100% {
+            transform: skew(-30deg, -30deg) rotate(-30deg);
+            height: 300px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h2>Slide in from left (multiple intermediary keyframes)</h2>
+    <p class="slide-in2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eligendi, reprehenderit vel consequatur error quod voluptas vitae. Facere, reprehenderit pariatur officia distinctio corporis tenetur sed corrupti nemo ea. Modi, nesciunt tenetur quae, temporibus dolore officiis praesentium distinctio alias, soluta perferendis voluptatibus magni aliquid dolores corporis unde impedit illum corrupti. Molestias?
+    </p>
+
+    <h2 style="margin-top: 60px">Slide in from right</h2>
+    <div class="hide-overflow">
+        <p class="slide-in-from-right">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eligendi, reprehenderit vel consequatur error quod voluptas vitae.
+        </p>
+    </div>
+    <p>Some text below the animation</p>
+
+    <h2>Transition</h2>
+    <div class="box">
+        <p>
+            Hello world!
+        </p>
+    </div>
+
+    <h2>Transform</h2>
+    <div class="rotate">
+        <p>
+            Hello world!
+        </p>
+    </div>
+
+    <h2>Transforms with animations</h2>
+    <div class="funky-box-container">
+        <div class="funky-box">
+        </div>
+        <div class="funky-box">
+        </div>
+        <div class="funky-box">
+        </div>
+    </div>
+</body>
+</html>
