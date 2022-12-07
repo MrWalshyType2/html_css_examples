@@ -13,5 +13,17 @@
         <source media="(min-width: 768px)" srcset="https://via.placeholder.com/720x240">
         <img src="https://via.placeholder.com/360x120" alt="">
     </picture>
+
+    <h2>Image srcset</h2>
+    <p>
+        <code>srcset</code> on an <code>img</code> element will cache the loaded 
+        image, so if a larger image is already downloaded it will not load in the smaller 
+        image but instead shrink the larger image.
+    </p>
+    <img src="https://via.placeholder.com/360x120" alt=""
+         srcset="https://via.placeholder.com/360x120 360w,
+                 https://via.placeholder.com/720x240 720w,
+                 https://via.placeholder.com/900x300 900w"
+         sizes="80vw">
 </body>
 </html>
