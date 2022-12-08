@@ -9,6 +9,11 @@ html {
     color: inherit;
 }
 
+p, a, li, dt, dd, span {
+    font-size: 1.6;
+    line-height: 1.5;
+}
+
 /* Navigation */
 .navbar {
     width: 100%;
